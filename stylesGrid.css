@@ -1,0 +1,66 @@
+body{
+    font-family: 'Roboto Flex', sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+        "menu menu"
+        "div1 div2"
+        "div3 div4";
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2px; /* Espaço entre as colunas e linhas */
+    padding: 20px;
+}
+
+.menu {
+    grid-area: menu;
+    width: 100%;
+    background-color: #4CAF50; /* Cor de fundo do menu */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.div1 {
+    grid-area: div1;
+    padding: 20px;
+    background-color: #f0f0f0; /* Cor de fundo para distinguir */
+    box-sizing: border-box;
+}
+
+.div2 {
+    grid-area: div2;
+    padding: 20px;
+    background-color: #f0f0f0; /* Cor de fundo para distinguir */
+    box-sizing: border-box;
+}
+
+.div3 {
+    grid-area: div3;
+    padding: 20px;
+    background-color: #e0e0e0; /* Cor de fundo diferente para distinguir */
+    box-sizing: border-box;
+}
+
+.div4 {
+    grid-area: div4;
+    padding: 20px;
+    background-color: #e0e0e0; /* Cor de fundo diferente para distinguir */
+    box-sizing: border-box;
+}
+/* Layout para Celulares */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-areas: 
+            "menu"
+            "div1"
+            "div2"
+            "div3"
+            "div4";
+        grid-template-columns: 1fr; /* Apenas uma coluna */
+    }
+
+    .menu {
+        width: 100%;
+    }
+}

@@ -1,0 +1,31 @@
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px; /* Espaço entre os itens */
+    padding: 20px;
+}
+
+.menu {
+    flex: 1 1 100%;
+    background-color: #4CAF50; /* Cor de fundo do menu */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.div1, .div2, .div3, .div4 {
+    flex: 1 1 calc(50% - 2px); /* Cada div ocupa metade do container, subtraindo o gap */
+    padding: 20px;
+    background-color: #f0f0f0; /* Cor de fundo */
+    box-sizing: border-box;
+}
+
+.div3, .div4 {
+    background-color: #e0e0e0; /* Cor diferente para distinguir */
+}
+
+/* Layout para Celulares */
+@media (max-width: 768px) {
+    .div1, .div2, .div3, .div4 {
+        flex: 1 1 100%; /* Cada div ocupa toda a largura do container em telas menores */
+    }
+}
