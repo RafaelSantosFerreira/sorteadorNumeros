@@ -2,26 +2,6 @@ body {
     background-color: #020202;
     font-family: 'Courier New', Courier, monospace;
     margin: 0;
-    padding: 0;    
-    padding: 20px;    
-    background-color: #000000; /* Define um fundo preto para div1 e div2 */
-    color: #ffffff;
-    font-size: 1rem;        
-    display: grid;
-    grid-template-areas:
-            "menu menu"
-            "div1 div2"
-            "div1 div3"
-            "dados dados";
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 2px; /* Espaço entre as colunas e linhas */
-    padding: 20px;
-}
-
-body {
-    background-color: #020202;
-    font-family: 'Courier New', Courier, monospace;
-    margin: 0;
     padding: 0;
     flex: 1 1 calc(50% - 2px); /* Cada div ocupa metade do container, subtraindo o gap */
     padding: 20px;
@@ -35,7 +15,6 @@ body {
 
 
 .menu {
-    grid-area: menu;
     font-family: Sora;
     text-transform: uppercase;
     text-align: left; /* Centraliza o texto */
@@ -54,10 +33,7 @@ body {
 
 
 
-.div1{
-    grid-area: div1;
 
-}
 
 .div1 h1 {
     padding: 0px;
@@ -102,9 +78,7 @@ body {
     overflow-wrap: break-word; /* Quebra palavras longas para evitar overflow */
     
 }
-.div2 {
-    grid-area: div2;
-}
+
 .div2 h1 {
     /*  width: 450px; /* Define a largura fixa */
      margin-top: 4px;
@@ -127,9 +101,7 @@ body {
  }
 .div3 {
     background-color: #000;
-    color: #ffffff;    
-    grid-area: div3;
-    
+    color: #ffffff;
 
     .numeros {
         display: flex;
@@ -246,35 +218,11 @@ body {
 
 
 
-.dados {
-    margin-top: 10px;
-    grid-area: dados;
-    display: flex; /* Alinha o conteúdo em linha */   
-    justify-content: center;
-    align-items: center;  
-    width: 100%;
-    height: 100px;
-    background-color: #e0e0e0;
-    border-radius: 10px;
-    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2),
-                inset -5px -5px 10px rgba(255, 255, 255, 0.7);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: Arial, sans-serif;
-    font-size: 18px;
-    color: #333;
-}
-
 /* Layout Responsivo para Celulares */
 @media (max-width: 768px) {
-   body{
-    grid-template-areas:
-    "menu"
-    "div1"
-    "div2"
-    "div3"
-    "dados";
-   }
+    .div1, .div2, .div3, .div4 {
+        flex: 1 1 100%;
+    }
+
  
 }
