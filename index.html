@@ -10,27 +10,62 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="flex-container">
-        <div class="menu"> 
-         
-            <img src="./assets/icone.svg" alt="Icone da Impresa">
-           <span> Numbers </span>
-        </div>
-        
-        </div>
-        <div class="div1">
-            <span>ONLINE - GRATUITO</span>
-            <h1>Sorteador de Nnúmeros</h1>
-            <h2>Como funciona o sorteador de números? </h2>
-            <p>O sorteador utiliza um algortimo de geraçao aleatória para criar números dentro do interevalo especificado pelo usuario</p>
+    <div class="menu"> 
+        <img src="./assets/icone.svg" alt="Ícone do Sorteador de Números">
+        <span>Numbers</span>
+    </div>
 
+    <div class="div1">
+        <span>ONLINE - GRATUITO</span>
+        <h1>Sorteador de Números</h1>
+        <h2>
+            <img src="/assets/dialogo.svg" alt="Ícone de Diálogo">
+            Como funciona o sorteador de números?
+        </h2>
+        <p>O sorteador utiliza um algoritmo de geração aleatória para criar números dentro do intervalo especificado pelo usuário.</p>
+        <h2>
+            <img src="/assets/dialogo.svg" alt="Ícone de Diálogo">
+            Posso escolher o intervalo dos números?
+        </h2>
+        <p>Sim, você pode definir os valores mínimo e máximo para o intervalo dos números sorteados.</p>
+    </div>
 
+    <div class="div2">
+        <h1>Quero sortear:</h1>
+        <p>Defina o intervalo de números, clique em "Sortear" e veja os resultados na tela. É rápido e fácil.</p>
+    </div>
 
-        </div>
-        <div class="div2">Conteúdo da div2</div>
-        <div class="div3">Conteúdo da div3</div>
-        <div class="div4">Conteúdo da div4</div>
+    <div class="div3">
+        <form action="" method="post">
+            <div class="numeros">
+                <div class="caixas">
+                    <label for="numero-inicial">NÚMEROS</label>
+                    <input type="text" id="numero-inicial" name="numero-inicial" required>
+                </div>
+                <div class="caixas">
+                    <label for="de">DE</label>
+                    <input type="text" id="de" name="de" required>              
+                </div>
+                <div class="caixas">
+                    <label for="ate">ATÉ</label>
+                    <input type="text" id="ate" name="ate" required>
+                </div>
+            </div>
+                
+            <div class="botaoRodape">
+                <div class="switch">
+                    <input type="checkbox" id="repetir-numero">
+                    <label for="repetir-numero"></label>
+                    <span>Não repetir número</span>
+                </div>
+                
+                <div class="button-container">
+                    <button type="submit">
+                        SORTEAR <span class="arrow">→</span>
+                    </button>
+                </div>
+            </div>
+        </form>
     </div>
 </body>
-
 </html>

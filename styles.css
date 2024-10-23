@@ -1,7 +1,9 @@
-body{
+body {
     background-color: #020202;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
 }
-
 
 .flex-container {
     display: flex;
@@ -11,37 +13,227 @@ body{
 }
 
 .menu {
-    font-family: 'Sora', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Sora;
     text-transform: uppercase;
     text-align: left; /* Centraliza o texto */
     flex: 1 1 100%;
-    background-color: #4CAF50; /* Cor de fundo do menu */
+  
     padding: 20px;
     box-sizing: border-box;
     display: flex;
     align-items: center; /* Centraliza verticalmente dentro do .menu */
-    justify-content: left; /* Centraliza horizontalmente os elementos dentro d*/
-   span {
-      margin:10px;
-   }
+    justify-content: left; /* Centraliza horizontalmente os elementos dentro */
+    color:#ffffff;
+    
+    span {
+        margin: 10px;
+    }
 }
 
-
-.div1, .div2,.div3, .div4 {
+.div1, .div2, .div3, .div4 {
     flex: 1 1 calc(50% - 2px); /* Cada div ocupa metade do container, subtraindo o gap */
     padding: 20px;
-    background-color: #f0f0f0; /* Cor de fundo */
     box-sizing: border-box;
+    background-color: #000000; /* Define um fundo preto para div1 e div2 */
 }
 
 .div3, .div4 {
     background-color: #e0e0e0; /* Cor diferente para distinguir */
 }
 
-/* Layout para Celulares */
-@media (max-width: 768px) {
-    .div1, .div2, .div3, .div4 {
-        flex: 1 1 100%; /* Cada div ocupa toda a largura do container em telas menores */
-    }
+.div1 span {
+    font-size: 1rem;
+    color: #ffffff; /* Cor do texto em branco */
 }
 
+.div1 h1 {
+    padding: 0px;
+    font-size: 4rem; /* Ajuste do tamanho da fonte */
+    color: #ffffff; /* Mude a cor do texto para branco */
+    text-transform: uppercase; /* Deixa o texto em letras maiúsculas */
+    text-align: left; /* Centraliza o texto */
+    font-weight: 600px; /* Deixe a fonte em negrito */
+    margin-top: 6px; 
+    overflow: hidden; /* Esconde o texto que excede a caixa */
+   white-space: wrap; /* Mantém o texto em uma linha */
+   /* text-overflow: ellipsis; /* Adiciona reticências (...) ao final se o texto for muito longo */
+
+    width: 450px; /* Faz a largura do h1 ocupar todo o espaço disponível */
+    height: 140px;
+    box-sizing: border-box; /* Garante que padding e borda sejam incluídos na largura total */
+   
+    margin-bottom: 0;
+}
+.div1 h2 {
+   /*  width: 450px; /* Define a largura fixa */
+    margin-top: 4px;
+    padding-top: 10px;
+    display: block; /* Permite que o texto seja exibido como um bloco */
+    white-space: normal; /* Permite que o texto quebre em várias linhas */
+    font-size: 1rem;
+    color: #C58DE7;
+    margin: 0; /* Remove a margem para melhor ajuste */
+    padding: 0; /* Remove o padding para garantir que ocupe todo o espaço */
+    text-align: left; /* Justifica o texto para preencher toda a largura */
+    overflow-wrap: break-word; /* Quebra palavras longas para evitar overflow */
+}
+
+.div1 p {
+   /*  width: 450px; /* Define a largura fixa */
+    display: block; /* Permite que o texto seja exibido como um bloco */
+    white-space: normal; /* Permite que o texto quebre em várias linhas */
+    margin: 0; /* Remove margens para maximizar o uso do espaço */
+    padding: 0; /* Remove padding */
+    font-size: 1rem;
+    color: #ffffff; /* Cor do texto branca */
+    line-height: 1.5; /* Define o espaçamento entre linhas para melhorar a legibilidade */
+    text-align: left; /* Justifica o texto para preencher toda a largura */
+    overflow-wrap: break-word; /* Quebra palavras longas para evitar overflow */
+    
+}
+
+.div2 h1 {
+    /*  width: 450px; /* Define a largura fixa */
+     margin-top: 4px;
+     padding-top: 10px;
+     text-transform: uppercase; /* Deixa o texto em letras maiúsculas */
+     display: block; /* Permite que o texto seja exibido como um bloco */
+     font-size: 1rem;
+     color: #ffffff;
+     text-align: left; /* Justifica o texto para preencher toda a largura */
+     overflow-wrap: break-word; /* Quebra palavras longas para evitar overflow */
+ }
+
+ .div2 p {
+    /*  width: 450px; /* Define a largura fixa */
+     margin-top: 4px;
+     padding-top: 0px;     
+     display: block; /* Permite que o texto seja exibido como um bloco */
+     font-size: 1rem;
+     color: #ffffff;
+     text-align: left; /* Justifica o texto para preencher toda a largura */
+     overflow-wrap: break-word; /* Quebra palavras longas para evitar overflow */
+ }
+.div3 {
+    background-color: #000;
+    color: #ffffff;
+
+    .numeros {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .caixas {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    input[type="text"] {
+        width: 100px;
+        height: 40px;
+        font-size: 18px;
+        text-align: center;
+        border-radius: 8px;
+        border: 1px solid #000;
+    }
+    
+    label {
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    /* Oculta o checkbox padrão */
+.switch input {
+    display: none;
+}
+
+/* Container do switch */
+.switch {
+    margin-top: 20px;
+    display: flex; /* Alinha o conteúdo em linha */   
+    justify-content: center;
+    align-items: center;    
+    gap: 8px; /* Espaço entre o switch e o texto */
+    cursor: pointer;
+}
+
+/* Estilo do toggle (aparência do switch) */
+.switch label {
+    position: relative;
+    width: 50px;
+    height: 25px;
+    background: #ccc;
+    border-radius: 25px;
+    transition: background-color 0.3s;
+    flex-shrink: 0; /* Evita que o switch diminua de tamanho */
+}
+
+/* Estilo do círculo interno do switch */
+.switch label::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 21px;
+    height: 21px;
+    background: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+/* Quando o checkbox estiver marcado */
+.switch input:checked + label {
+    background: #9c27b0; /* Cor roxa */
+}
+
+.switch input:checked + label::after {
+    transform: translateX(25px);
+}
+
+/* Estilo do texto ao lado do switch */
+.switch span {
+    font-size: 16px;
+    color: #ffffff;
+    white-space: nowrap; /* Garante que o texto não quebre */
+    line-height: 25px; /* Alinha o texto verticalmente com o switch */
+}
+}
+.button-container {
+    margin-top: 20px;    
+    display: flex; /* Alinha o conteúdo em linha */   
+    justify-content: center;
+    align-items: center;    
+    gap: 8px; /* Espaço entre o switch e o texto */
+    cursor: pointer;
+}
+
+/* Estilo personalizado para o botão */
+.button-container button {
+    width: 150px; /* Largura desejada */
+    height: 50px; /* Altura desejada */
+    padding: 10px; /* Espaçamento interno */
+    font-size: 18px; /* Tamanho da fonte */
+    cursor: pointer;
+    border-radius: 8px; /* Bordas arredondadas */
+    border: none; /* Remover borda */
+    background-color: #9c27b0; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    transition: background-color 0.3s ease;
+}
+
+/* Efeito de hover no botão */
+.button-container button:hover {
+    background-color: #7b1fa2; /* Cor ao passar o mouse */
+}
+
+
+/* Layout Responsivo para Celulares */
+@media (max-width: 768px) {
+    .div1, .div2, .div3, .div4 {
+        flex: 1 1 100%;
+    }
+}
